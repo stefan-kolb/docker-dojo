@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.30'
+    implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-jdk-http', version: '2.30'
+    implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.30'
+    implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.30'
+    implementation 'com.owlike:genson:1.4'
+    implementation 'se.michaelthelin.spotify:spotify-web-api-java:4.2.1'
+    implementation 'org.glassfish.jersey.inject:jersey-hk2:2.30'
+}
+
+application {
+    mainClassName = 'de.uniba.dsg.jaxrs.Server'
+}

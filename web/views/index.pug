@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(style='text-align: center')
+      img(src=cover)
+      h1=song
+      h3=artist
+      img(src='images/play.png', width="250px")
+      h4 #{artist}'s Most Popular Songs
+      ol
+        each val in charts
+          li= val["title"]

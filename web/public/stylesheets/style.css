@@ -1,0 +1,14 @@
+body {
+  background-color: #1c1c1f;
+  color: #ffffff;
+  padding: 30px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+ol {
+  padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}
