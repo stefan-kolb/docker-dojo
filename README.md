@@ -36,7 +36,7 @@ The web project (written in Node.js) mimics a mock-up of a web music player and 
 mentioned services. It will display the currently played song title and artist name together with
 the cover art. Moreover, it will also show the current top songs of the artist.
 Replace the URLs with your service endpoints inside `routes/index.js` of the web project if necessary.
-The user interface is available at `http://{docker-machine-ip}:80`.
+The user interface is available at `http://{docker-machine-ip}:3000`.
 To alter the currently played song, change the URL query params inside the browser
 window, e.g., `http://{docker-machine-ip}/?title={songtitle}&artist={artist name}`.
 
