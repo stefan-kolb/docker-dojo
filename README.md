@@ -82,7 +82,7 @@ Therefore, adapt the existing `docker-compose.yml` in the root project folder.
 Make sure to set appropriate dependencies to allow an automatic bootstrapping of the service composition via `docker-compose up`.
 The services images, search, and charts need the `microservices.env` mounted as environment file that provides the credentials for the Spotify API.
 
-Remember, the user interface is available at http://{docker-machine-ip}:80. To alter the currently played song, change the URL query params inside the browser window, e.g., http://{docker-machine-ip}/?title={songtitle}&artist={artist name}.
+Remember, the user interface is available at `http://{docker-machine-ip}:80`. To alter the currently played song, change the URL query params inside the browser window, e.g., `http://{docker-machine-ip}/?title={songtitle}&artist={artist name}`.
 
 As an *optional* improvement, define separate named networks inside the Compose file that isolate at least the frontend from the backend services or even all of the services from each other.
 
