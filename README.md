@@ -61,17 +61,18 @@ The charts, search, and images projects are all based on a Java Gradle build.
 
 As Java code needs to be compiled, we need to use `gradle:6.0.1-jdk8` as base image.
 As first step, copy the app artifacts into a folder inside the image.
-Run `gradle installDist` to create a runnable distribution at `/build/install/{project_name}` including all dependencies of the Java application. You can get each of the project names from `settings.gradle`.
+Run `gradle installDist` to create a runnable distribution at `build/install/{project_name}` including all dependencies of the Java application. You can get each of the project names from `settings.gradle`.
 
-To run the application, you can execute the prepared shell startup scripts inside `/build/install/{project_name}/bin/{project_name}`
+To run the application, you can execute the prepared shell startup scripts inside `build/install/{project_name}/bin/{project_name}`
+
+Slightly adapt the Dockerfiles for each of the remaining service projects.
+To run and test the resulting services you need to call `docker run` with the `microservices.env` environment file.
 
 *Optionally*, we want to apply a [multi-stage build][3] here to avoid cluttering the final Docker image with the build artifacts (and keep the image size down) and only create a Docker image with the runnable artifacts. This is a great way to apply the builder pattern and avoid maintaining two separate Dockerfiles.
 
 Therefore, the application container can be based on `alpine`, where we simply install Java via `apk add -U openjdk8-jre`.
-Now, copy the compiled application artifacts `/build/install/{project_name}` from the build stage inside the application container.
+Now, copy the compiled application artifacts `build/install/{project_name}` from the build stage inside the application container.
 
-Slightly adapt the Dockerfiles for each of the remaining service projects.
-To run and test the resulting services you need to call `docker run` with the `microservices.env` environment file.
 
 ## Task 2: Service Orchestration
 
