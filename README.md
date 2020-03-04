@@ -1,4 +1,4 @@
-Docker Dojo
+# Docker Microservices Dojo
 
 In this coding dojo, you will implement a mock-up of a web music player. We will leverage
 the [Spotify API][1] and a [Java wrapper][2] to get access to music data. We will break down
