@@ -47,6 +47,7 @@ Your first task is to dockerize the services described above.
 Therefore, create a `Dockerfile` in the root folder of each of the services.
 Fill the Dockerfile with the necessary steps to be able to create a Docker image and run a Docker container.
 Verify if the service is running correctly by calling an exposed endpoint with `curl` or your Browser.
+For testing purposes, you can use artist ID `3XHO7cRUPCLOr6jwp8vsx5` and title ID `57tzAvfPHXHzCHUNp9AUBm`.
 
 ### Web
 
