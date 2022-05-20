@@ -7,7 +7,18 @@ desired use case. All services are implemented as RESTful Web Services and shoul
 separate Docker containers. The following figure shows the overall architecture of the service
 orchestration.
 
-![Dockerized Music Player](https://github.com/stefan-kolb/docker-dojo/blob/master/architecture.png "Dockerized Music Player")
+```mermaid
+flowchart LR
+subgraph docker-compose.yml
+W(Web UI)
+C(Charts)
+S(Search)
+I(Images)
+end
+Sp(Spotify)
+W --> C & S & I 
+C & S & I -.- Sp
+```
 
 ## Search
 
