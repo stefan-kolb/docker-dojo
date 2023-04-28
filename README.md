@@ -36,9 +36,9 @@ The web project (written in Node.js) mimics a mock-up of a web music player and 
 mentioned services. It will display the currently played song title and artist name together with
 the cover art. Moreover, it will also show the current top songs of the artist.
 Replace the URLs with your service endpoints inside `routes/index.js` of the web project if necessary.
-The user interface is available at `http://{docker-machine-ip}:3000`.
+The user interface is available at `http://{docker-container-ip}:8080`.
 To alter the currently played song, change the URL query params inside the browser
-window, e.g., `http://{docker-machine-ip}/?title={songtitle}&artist={artist name}`.
+window, e.g., `http://{docker-container-ip}/?title={songtitle}&artist={artist name}`.
 
 ## Task 1: Dockerize Services
 
@@ -80,10 +80,10 @@ Now, copy the compiled application artifacts `build/install/{project_name}` from
 All of the described services should be packaged inside their own Docker
 container and orchestrated via Docker Compose.
 Therefore, adapt the existing `docker-compose.yml` in the root project folder.
-Make sure to set appropriate dependencies to allow an automatic bootstrapping of the service composition via `docker-compose up`.
+Make sure to set appropriate dependencies to allow an automatic bootstrapping of the service composition via `docker compose up`.
 The services images, search, and charts need the `microservices.env` mounted as environment file that provides the credentials for the Spotify API.
 
-Remember, the user interface is available at `http://{docker-machine-ip}:80`. To alter the currently played song, change the URL query params inside the browser window, e.g., `http://{docker-machine-ip}/?title={songtitle}&artist={artist name}`.
+Remember, the user interface is available at `http://{docker-container-ip}:8080`. To alter the currently played song, change the URL query params inside the browser window, e.g., `http://{docker-container-ip}:8080/?title={songtitle}&artist={artist name}`.
 
 As an *optional* improvement, define separate named networks inside the Compose file that isolate at least the frontend from the backend services or even all of the services from each other.
 
