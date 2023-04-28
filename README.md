@@ -80,7 +80,7 @@ Now, copy the compiled application artifacts `build/install/{project_name}` from
 All of the described services should be packaged inside their own Docker
 container and orchestrated via Docker Compose.
 Therefore, adapt the existing `docker-compose.yml` in the root project folder.
-Make sure to set appropriate dependencies to allow an automatic bootstrapping of the service composition via `docker-compose up`.
+Make sure to set appropriate dependencies to allow an automatic bootstrapping of the service composition via `docker compose up`.
 The services images, search, and charts need the `microservices.env` mounted as environment file that provides the credentials for the Spotify API.
 
 Remember, the user interface is available at `http://{docker-machine-ip}:8080`. To alter the currently played song, change the URL query params inside the browser window, e.g., `http://{docker-machine-ip}:8080/?title={songtitle}&artist={artist name}`.
