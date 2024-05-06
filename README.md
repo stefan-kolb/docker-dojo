@@ -15,8 +15,8 @@ C(Charts)
 S(Search)
 I(Images)
 end
-Sp(Spotify)
-W --> C & S & I 
+Sp((Spotify))
+W --> C & S & I
 C & S & I -.- Sp
 ```
 
