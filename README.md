@@ -27,7 +27,7 @@ song titles and returns the appropriate Spotify IDs on success. These IDs are th
 that can be passed to the other services to request an artist's top songs or cover images for a
 particular track. The service exposes two different resources: one for tracks and one for
 artists. The necessary parameters can be passed via query params. For instance, the search resource
-for tracks is available at `{hostaddress}/tracks/search?title={song title}&artist={artist}`. The
+for tracks is available at `{hostaddress}/api/tracks/search?title={song title}&artist={artist}`. The
 track search returns an object that contains the track ID, artist name, and song title.
 The artist object solely returns the artist ID and the artist name.
 
@@ -35,11 +35,11 @@ The artist object solely returns the artist ID and the artist name.
 
 The Charts service returns the current top songs for a particular artist.
 To get a list of tracks (ID, title, artist) the endpoint needs a valid artist ID. The
-resource is exposed at `{hostaddress}/charts/{artistID}`.
+resource is exposed at `{hostaddress}/api/charts/{artistID}`.
 
 ## Images
 
-This service provides the cover art for a particular track ID. The endpoint is available at `{hostaddress}/covers/{trackID}`.
+This service provides the cover art for a particular track ID. The endpoint is available at `{hostaddress}/api/covers/{trackID}`.
 
 ## Web
 
